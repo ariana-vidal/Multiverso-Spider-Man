@@ -2,6 +2,7 @@
 @import url('/assets/css/global.css');
 @import url('/assets/css/components/navigator.css');
 @import url('/assets/css/components/pills.css');
+@import url('/assets/css/components/link-button.css');
 
 .s-wrapper {
   display: flex;
@@ -66,3 +67,7 @@
   margin-bottom: 20px;
 }
 
+.s-wrapper .s-main-content .s-links ul {
+  display: flex;
+  flex-direction: row;
+}
