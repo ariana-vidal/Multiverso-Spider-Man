@@ -3,6 +3,7 @@
 @import url('/assets/css/components/navigator.css');
 @import url('/assets/css/components/pills.css');
 @import url('/assets/css/components/link-button.css');
+@import url('/assets/css/components/gallery.css');
 
 .s-wrapper {
   display: flex;
