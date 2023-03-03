@@ -21,7 +21,12 @@ function addEventListenersTocards() {
 document.addEventListener("DOMContentLoaded", addEventListenersTocards, false);
 
 
-function selectCarouselItem(selectdItem) {
-  console.log('ssss', selectdItem);
-  
+function selectCarouselItem(selectdButtonElement) {
+  const selectdItem = selectdButtonElement.id;
+  const carousel = document.querySelector('.s-cards-carousel');
+  const transform = carousel.style.transform;
+  const rotateY = transform.match(/rotateY\((-?\d+deg)\)/i);
+  const rotateYDeg = -120 * (Number(selectdItem) - 1);
+  const newTransform = transform.replace(rotateY[0], `rotateY(${rotateYDeg}deg)`);
+  carousel.style.transform = newTransform;
 }
