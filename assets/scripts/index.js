@@ -29,4 +29,8 @@ function selectCarouselItem(selectdButtonElement) {
   const rotateYDeg = -120 * (Number(selectdItem) - 1);
   const newTransform = transform.replace(rotateY[0], `rotateY(${rotateYDeg}deg)`);
   carousel.style.transform = newTransform;
+
+  const activeButtonElement = document.querySelector('.s-controller__button--active');
+  activeButtonElement.classList.remove('s-controller__button--active');
+  selectdButtonElement.classList.add('s-controller__button--active');
 }
